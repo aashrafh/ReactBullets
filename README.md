@@ -56,6 +56,19 @@ For the software engineering project in college, I will be in the Front-End team
     * If you can’t find a component where it makes sense to own the state, create a new component solely for holding the state and add it somewhere in the hierarchy above the common owner component.
  * Step 5: Add Inverse Data Flow
  
+ * aria-* attributes should be hyphen-cased.
+* Accessibility Points for Consideration:
+ * Semantic HTML: foundation of accessibility in a web application.
+ * Accessible Forms: Labeling + Notifying the user of errors.
+ * Ensure that your web application can be fully operated with the keyboard only.
+ * Mechanisms to skip to desired content
+ * Be carefull about focus as React modify HTML DOM during runtime which may cause to keyboard focus being lost or set to an unexpected element.
+ * Ensure that all functionality exposed through a mouse or pointer event can also be accessed using the keyboard alone.
+ * Indicate the human language of page texts as screen reader software uses this to select the correct voice settings.
+ * Set the document <title> to correctly describe the current page content as this ensures that the user remains aware of the current page context.
+ * Ensure that all readable text on your website has sufficient color contrast to remain maximally readable by users with low vision.
+
+ 
 ## Learning reasources:
 - [Complete Intro to Web Development](https://frontendmasters.com/courses/web-development-v2/)
 - [JavaScript](https://frontendmasters.com/learn/javascript/)
