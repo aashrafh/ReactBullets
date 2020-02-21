@@ -68,7 +68,14 @@ For the software engineering project in college, I will be in the Front-End team
  * Set the document <title> to correctly describe the current page content as this ensures that the user remains aware of the current page context.
  * Ensure that all readable text on your website has sufficient color contrast to remain maximally readable by users with low vision.
 
- 
+ * Code Splitting:
+* A bundle: the process of following imported files and merging them into a single file.
+* Create React App, Next.js, Gatsby, or a similar tool, has a Webpack setup out of the box to bundle your app.
+* You need to keep an eye on the code you are including in your bundle so that you don’t accidentally make it so large that your app takes a long time to load.
+* Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime.
+* The best way to introduce code-splitting into your app is through the dynamic import().
+
+
 ## Learning reasources:
 - [Complete Intro to Web Development](https://frontendmasters.com/courses/web-development-v2/)
 - [JavaScript](https://frontendmasters.com/learn/javascript/)
