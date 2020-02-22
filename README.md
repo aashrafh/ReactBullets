@@ -144,12 +144,12 @@ Objects: can be thought of as simple collections of name-value pairs, they are s
 Arrays: a special type of object
 * Numerical properties can naturally be accessed only using [] syntax.
 * How to create an Array? 
- 1- ```
+ 1- 
     var a = new Array();
 a[0] = 'dog';
 a[1] = 'cat';
 a[2] = 'hen';
-```
+
  2- more convenient notation is to use an array literal: ```var a = ['dog', 'cat', 'hen'];```
 
 * ```array.length``` isn't necessarily the number of items in the array, WHY? the length of the array is one more than the highest index.
