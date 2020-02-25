@@ -181,6 +181,7 @@ Closures: one of the most powerful abstractions that JavaScript has to offer —
 - [JavaScript](https://frontendmasters.com/courses/getting-started-javascript-v2/)
 - [React.JS](https://reactjs.org/docs/getting-started.html)
 - [React.JS](https://frontendmasters.com/learn/react/)
+- [JS Tutorial](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
 
 ## Best Practices:
 - [Front-End Checklist](https://github.com/thedaviddias/Front-End-Checklist)
