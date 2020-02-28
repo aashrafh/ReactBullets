@@ -174,6 +174,10 @@ Closures: one of the most powerful abstractions that JavaScript has to offer —
 * Whenever JavaScript executes a function, a 'scope' object is created to hold the local variables created within that function. It is initialized with any variables passed in as function parameters.
 * A closure is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects. 
 
+Hooks: They let you use state and other React features without writing a class.
+* Hooks let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data). Hooks let you use more of React’s features without classes.
+* Classes don’t minify very well, and they make hot reloading flaky and unreliable. There are no plans to remove classes from React. 
+
 
 ## Learning reasources:
 - [Complete Intro to Web Development](https://frontendmasters.com/courses/web-development-v2/)
