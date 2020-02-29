@@ -178,6 +178,48 @@ Hooks: They let you use state and other React features without writing a class.
 * Hooks let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data). Hooks let you use more of React’s features without classes.
 * Classes don’t minify very well, and they make hot reloading flaky and unreliable. There are no plans to remove classes from React. 
 
+https://www.npmjs.com/package/eslint-plugin-react-hooks
+What is a Hook? Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes.
+* React provides a few built-in Hooks like useState. You can also create your own Hooks to reuse stateful behavior between different components.
+* Hooks are a way to reuse stateful logic, not state itself.
+* Hooks must be called on the top level of our components. If we want to run an effect conditionally, we can put that condition inside our Hook
+
+State Hook:
+* ```useState``` returns a pair: the current state value and a function that lets you update it. 
+* It’s similar to this.setState in a class, except it doesn’t merge the old and new state together.
+* The only argument to useState is the initial state.
+* Unlike this.state, the state here doesn’t have to be an object — although it can be if you want. 
+* You can use the State Hook more than once in a single component.
+* What does calling useState do? It declares a “state variable”, we could call it anything. Normally, variables “disappear” when the function exits but state variables are preserved by React.
+
+
+Effect Hook:
+* ```useEffect``` adds the ability to perform side effects from a function component. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes, but unified into a single API.
+* When you call useEffect, you’re telling React to run your “effect” function after flushing changes to the DOM.
+* Effects are declared inside the component so they have access to its props and state.
+* By default, React runs the effects after every render — including the first render.
+* Effects may also optionally specify how to “clean up” after them by returning a function. 
+*  think that effects happen “after render”. React guarantees the DOM has been updated by the time it runs the effects.
+* Unlike componentDidMount or componentDidUpdate, effects scheduled with useEffect don’t block the browser from updating the screen. 
+* Every effect may return a function that cleans up after it. 
+* React performs the cleanup when the component unmounts. React also cleans up effects from the previous render before running the effects next time. There is no special code for handling updates because useEffect handles them by default.
+* Tips: Use Multiple Effects to Separate Concerns
+* In some cases, cleaning up or applying the effect after every render might create a performance problem.
+* You can tell React to skip applying an effect if certain values haven’t changed between re-renders.
+
+Rules of Hooks:
+Hooks are JavaScript functions, but they impose two additional rules:
+* Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions.
+* Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks — your own custom Hooks.)
+* React provide a linter plugin to enforce these rules automatically.
+
+Building Your Own Hooks:
+* Custom Hooks let you reuse some stateful logic between components but without adding more components to your tree.
+* Custom Hooks are more of a convention than a feature. If a function’s name starts with ”use” and it calls other Hooks, we say it is a custom Hook.
+* It’s just like a normal function.
+* All we do isto extract some common code between functions into a separate function.
+* Without starting the Hook with ```use``, React wouldn’t be able to automatically check for violations of rules of Hooks because we couldn’t tell if a certain function contains calls to Hooks inside of it.
+* Tip: Pass Information Between Hooks
 
 ## Learning reasources:
 - [Complete Intro to Web Development](https://frontendmasters.com/courses/web-development-v2/)
