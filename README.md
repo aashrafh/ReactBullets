@@ -28,17 +28,17 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
   <strong>Note</strong>: Binding in constructor or Class field sytaxt is <strong>recommended</strong> to avoid performance problems.
 * In JavaScript, ```true && expression``` always evaluates to <strong>expression</strong>, and ```false && expression``` always evaluates to <strong>false</strong>.
 * Conditional Redering: <strong>it is up to you</strong> to choose an appropriate style based on what you and your team consider more readable. Also remember that whenever conditions become too <strong>complex</strong>, it might be a good time to extract a <strong>component</strong>.
-* Preventing Component from Rendering: return null instead of its render output. Returning null from a component’s render method does not affect the firing of the component’s lifecycle methods. For instance componentDidUpdate will still be called.
-* A “key” is a special string attribute you need to include when creating lists of elements. Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity.
-* The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use IDs from your data as keys. When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort.
-* Indexes for key are not recommended so it's better to assign an explicit key for a list item. Indexes for keys are the default in React.
-* Keys only make sense in the context of the surrounding array. A good rule of thumb is that elements inside the map() call need keys.
+* Preventing Component from Rendering: return ```null``` instead of its render output. Returning ```null``` from a component’s render method does not affect the firing of the component’s lifecycle methods. For instance ```componentDidUpdate``` will still be called.
+* A ```key``` is a special string attribute you need to include when creating lists of elements. Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity.
+* The best way to pick a key is to use a <strong>string that uniquely identifies a list item<strong> among its siblings. Most often you would use IDs from your data as keys. When you don’t have stable IDs for rendered items, you may use the item <strong>index</strong> as a key as a last resort.
+* <strong>Indexes</strong> for key are <strong>not recommended</strong> so it's better to assign an explicit key for a list item. Indexes for keys are the default in React.
+* Keys only make sense in the context of the surrounding array. A good rule of thumb is that elements inside the ```map()``` call need keys.
 * Keys used within arrays should be unique among their siblings. However they don’t need to be globally unique.
-* Keys serve as a hint to React but they don’t get passed to your components. If you need the same value in your component, pass it explicitly as a prop with a different name (use different name from ```key```).
-* It's convenient to have JavaScript function that handles the submission of the form and its related validation stuff. The standard way is ```Controlled Component``` which differs a little bit from plain HTML form.
-* Controlled Component: combining elements state and update it based on user input. An input form element whose value is controlled by React. This makes it straightforward to modify or validate user input.
-* Files from user device are read-only so they are ```uncontrolled components```.
-* ```Fomik``` is a good complete solution for handling forms. It is built on controlled component princeples so it is important to learn them.
+* Keys serve as a hint to React but they <strong>don’t get passed to your components</strong>. If you need the same value in your component, <strong>pass it</strong> explicitly as a prop with a different name (use different name from ```key```).
+* It's <strong>convenient</strong> to have JavaScript function that handles the submission of the form and its related validation stuff. The standard way is ```Controlled Component``` which differs a little bit from plain HTML form.
+* ```Controlled Component```: combining elements state and update it based on user input. An input form element whose value is controlled by React. This makes it straightforward to modify or validate user input.
+* Files from user device are ```read-only``` so they are ```uncontrolled components```.
+* ```Formik``` is a good complete solution for handling forms. It is built on controlled component princeples so it is important to learn them.
 * If you want to reflect the same data in several components, it is recommended to lift the shared state up to their closest ancestor.
 * There should be a single “source of truth” for any data that changes in a React application.
 * It is recommended to use composition instead of inheritance to reuse code between components.
