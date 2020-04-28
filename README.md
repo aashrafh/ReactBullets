@@ -1,7 +1,7 @@
-# React.JS
-For the software engineering project in college, I will be in the Front-End team so this repo contains all the stuff I will learn.
+# ReactBullets
+While learning ReactJS, I took notes in the form of bullet points. Here are some points I wrote before start coding [Oud Frontend](https://github.com/AbdallahHemdan/oudFrontend) in addition to some helpfull rsources which was a helping hand.
 
-# Notes
+## Notes
 * Use camelCase in JSX attributes as it treateed as JavaScript objects not DOM elements.
 * Always start component names with a capital letter: For example, <div /> represents an HTML div tag, but <Welcome /> represents a component and requires Welcome to be in scope.
 * If a part of your UI is used several times (Button, Panel, Avatar), or is complex enough on its own (App, FeedStory, Comment), it is a good candidate to be a reusable component.
