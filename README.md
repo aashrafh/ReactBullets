@@ -16,7 +16,7 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
 * A ```top-down``` or ```unidirectional``` data flow; Any state is always owned by some specific component, and any data or UI derived from that state can only affect components ```below``` them in the tree.
 * Handling events in React VS DOM:
   1. React events are named using ```camelCase```, rather than ```lowercase```.
-  2. With JSX you pass a <strong>function as the event handler<strong>, rather than a <strong>string</strong>.
+  2. With JSX you pass a <strong>function as the event handler</strong>, rather than a <strong>string</strong>.
   3. You <strong>cannot</strong> return false to prevent default behavior in React. You must call ```preventDefault``` explicitly.
   4. You generally don’t need to call ```addEventListener```. Just provide a listener when the element is initially rendered.
 * Important note on how functions work in JavaScript:
