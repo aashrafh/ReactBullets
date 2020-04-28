@@ -2,16 +2,16 @@
 While learning ReactJS, I took notes in the form of bullet points. Here are some points I wrote before start coding [Oud Frontend](https://github.com/AbdallahHemdan/oudFrontend) in addition to some helpfull rsources which was a helping hand.
 
 ## Notes
-* Use camelCase in JSX attributes as it treateed as JavaScript objects not DOM elements.
-* Always start component names with a capital letter: For example, <div /> represents an HTML div tag, but <Welcome /> represents a component and requires Welcome to be in scope.
+* Use ```camelCase``` in JSX attributes as it treateed as JavaScript objects not DOM elements.
+* Always start component names with a capital letter: For example, ```<div />``` represents an HTML div tag, but ```<Welcome />``` represents a component and requires Welcome to be in scope.
 * If a part of your UI is used several times (Button, Panel, Avatar), or is complex enough on its own (App, FeedStory, Comment), it is a good candidate to be a reusable component.
-* Pure Functions: they do not attempt to change their inputs, and always return the same result for the same inputs.
-* Impure Functions: changes its own input.
-* The single React strict rule: All React components must act like pure functions with respect to their props.
+* ```Pure Functions```: they do not attempt to change their inputs, and always return the same result for the same inputs.
+* ```Impure Functions```: changes its own input.
+* The single React strict rule: <strong>All</strong> React components must act like pure functions with respect to their props.
 * Three things about setState():
- 1- Do Not Modify State Directly: The only place where you can assign this.state is the constructor.
- 2- State Updates May Be Asynchronous: Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state.
- 3- State Updates are Merged: You can update independant variables independently with seperate setState() calls.
+ 1. Do Not Modify State Directly: The only place where you can assign this.state is the constructor.
+ 2. State Updates May Be Asynchronous: Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state.
+ 3. State Updates are Merged: You can update independant variables independently with seperate setState() calls.
 * State is often called local or encapsulated. It is not accessible to any component other than the one that owns and sets it.
 * A “top-down” or “unidirectional” data flow. Any state is always owned by some specific component, and any data or UI derived from that state can only affect components “below” them in the tree.
 * Handling events in React VS DOM:
