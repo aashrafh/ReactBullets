@@ -15,19 +15,19 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
 * State is often called local or encapsulated. It is not accessible to any component other than the one that owns and sets it.
 * A ```top-down``` or ```unidirectional``` data flow; Any state is always owned by some specific component, and any data or UI derived from that state can only affect components ```below``` them in the tree.
 * Handling events in React VS DOM:
- 1- React events are named using camelCase, rather than lowercase.
- 2- With JSX you pass a function as the event handler, rather than a string.
- 3- You cannot return false to prevent default behavior in React. You must call preventDefault explicitly.
- 4- You generally don’t need to call addEventListener. Just provide a listener when the element is initially rendered.
-* Important note on how functionswork in JavaScript:
-   * Generally, if you refer to a method without () after it, such as onClick={this.handleClick}, you should bind that method.
-   * You have to be careful about the meaning of this in JSX callbacks. Class methods are not bound by default. If you forget to bind this.handleClick and pass it to onClick, this will be undefined when the function is actually called.
+  1. React events are named using ```camelCase```, rather than ```lowercase```.
+  2. With JSX you pass a <strong>function as the event handler<strong>, rather than a <strong>string</strong>.
+  3. You <strong>cannot</strong> return false to prevent default behavior in React. You must call ```preventDefault``` explicitly.
+  4. You generally don’t need to call ```addEventListener```. Just provide a listener when the element is initially rendered.
+* Important note on how functions work in JavaScript:
+   * Generally, if you refer to a method without ```()``` after it, such as ```onClick={this.handleClick}```, you should bind that method.
+   * You have to be careful about the meaning of this in JSX callbacks. Class methods are <strong>not bound</strong> by default. If you forget to bind ```this.handleClick``` and pass it to onClick, this will be ```undefined``` when the function is actually called.
 * How to avoid binding ```this```?
- 1- Experimental public class fields syntax (assign it to an arrow function).
- 2- Use an arrow function in the callback: ```onClick={(e) => this.handleClick(e)}```
- Note: Binding in constructor or Class field sytaxt is recommended to avoid performance problems.
-* In JavaScript, true && expression always evaluates to expression, and false && expression always evaluates to false.
-* Conditional Redering: it is up to you to choose an appropriate style based on what you and your team consider more readable. Also remember that whenever conditions become too complex, it might be a good time to extract a component.
+  1. Experimental public class fields syntax (assign it to an ```arrow function```).
+  2. Use an arrow function in the callback: ```onClick={(e) => this.handleClick(e)}```
+  <strong>Note</strong>: Binding in constructor or Class field sytaxt is <strong>recommended</strong> to avoid performance problems.
+* In JavaScript, ```true && expression``` always evaluates to <strong>expression</strong>, and ```false && expression``` always evaluates to <strong>false</strong>.
+* Conditional Redering: <strong>it is up to you</strong> to choose an appropriate style based on what you and your team consider more readable. Also remember that whenever conditions become too <strong>complex</strong>, it might be a good time to extract a <strong>component</strong>.
 * Preventing Component from Rendering: return null instead of its render output. Returning null from a component’s render method does not affect the firing of the component’s lifecycle methods. For instance componentDidUpdate will still be called.
 * A “key” is a special string attribute you need to include when creating lists of elements. Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity.
 * The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use IDs from your data as keys. When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort.
