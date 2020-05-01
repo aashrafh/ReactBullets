@@ -100,7 +100,7 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
   * Whenever JavaScript executes a function, a ```scope``` object is created to hold the local variables created within that function. It is initialized with any variables passed in as function parameters.
   * A closure is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects. 
 
-## Notes
+## React Notes
 * Use ```camelCase``` in JSX attributes as it treateed as JavaScript objects not DOM elements.
 * Always start component names with a capital letter: For example, ```<div />``` represents an HTML div tag, but ```<Welcome />``` represents a component and requires Welcome to be in scope.
 * If a part of your UI is used several times (Button, Panel, Avatar), or is complex enough on its own (App, FeedStory, Comment), it is a good candidate to be a reusable component.
@@ -240,16 +240,19 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
     * Frameworks like ```Cypress```, ```puppeteer``` and ```webdriver``` are useful for running ```end-to-end``` tests.
     * When writing tests, we’d like to mock out the parts of our code that don’t have equivalents inside our testing environment. It is then useful to be able to selectively mock these functions with test-friendly versions.
 
-## Learning reasources:
-- [Complete Intro to Web Development](https://frontendmasters.com/courses/web-development-v2/)
-- [JavaScript](https://frontendmasters.com/learn/javascript/)
-- [JavaScript](https://frontendmasters.com/courses/getting-started-javascript-v2/)
-- [React.JS](https://reactjs.org/docs/getting-started.html)
-- [React.JS](https://frontendmasters.com/learn/react/)
-- [JS Tutorial](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+## Learning Resources:
+  * <strong>General</strong>:
+    * [Complete Intro to Web Development - Frontend Masters](https://frontendmasters.com/courses/web-development-v2/)
+  * <strong>JavaScript</strong>:
+    * [JS Tutorial](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+    * [JavaScript Path - Frontend Masters](https://frontendmasters.com/learn/javascript/)
+    * [Getting Started with JavaScript - Frontend Masters](https://frontendmasters.com/courses/getting-started-javascript-v2/)
+  * <strong>React</strong>:
+    * [React Docs](https://reactjs.org/docs/getting-started.html)
+    * [React Path - Frontend Masters](https://frontendmasters.com/learn/react/)
 
 ## Best Practices:
-- [Front-End Checklist](https://github.com/thedaviddias/Front-End-Checklist)
-- [Clean Code](https://github.com/ryanmcdermott/clean-code-javascript)
-- [Front-End Performance Checklist](https://github.com/thedaviddias/Front-End-Performance-Checklist)
-- [33 concepts JS](https://github.com/leonardomso/33-js-concepts)
+  * [Front-End Checklist](https://github.com/thedaviddias/Front-End-Checklist)
+  * [Clean Code](https://github.com/ryanmcdermott/clean-code-javascript)
+  * [Front-End Performance Checklist](https://github.com/thedaviddias/Front-End-Performance-Checklist)
+  * [33 concepts JS](https://github.com/leonardomso/33-js-concepts)
