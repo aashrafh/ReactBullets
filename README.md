@@ -1,5 +1,5 @@
 # ReactBullets
- While learning ReactJS, I took notes in the form of bullet points. Here are some points I wrote before start coding Oud Frontend in addition to some helpful resources which was a helping hand that may help you if you are learning ReactJS.
+ While learning ReactJS, I took notes in the form of bullet points for fast revision. Here are some points I wrote before start coding Oud Frontend in addition to some helpful resources which was a helping hand that may help you if you are learning ReactJS.
 
 ## JavaScript Overview:
 * JavaScript language has no concept of <strong>input</strong> or <strong>output</strong>. It is up to <strong>the host environment</strong> to provide mechanisms for communicating with the outside world.
