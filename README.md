@@ -1,5 +1,5 @@
 # ReactBullets
-While learning ReactJS, I took notes in the form of bullet points. Here are some points I wrote before start coding [Oud Frontend](https://github.com/AbdallahHemdan/oudFrontend) in addition to some helpfull rsources which was a helping hand.
+While learning ReactJS, I took notes in the form of bullet points. Here are some points I wrote before start coding [Oud Frontend](https://github.com/AbdallahHemdan/oudFrontend) in addition to some helpfull rsources which was a helping hand which may help you if you are learning ReactJS.
 
 ## JavaScript Overview:
 * JavaScript language has no concept of <strong>input</strong> or <strong>output</strong>. It is up to <strong>the host environment</strong> to provide mechanisms for communicating with the outside world.
@@ -40,34 +40,34 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
   2. All other values become ```true```.
   * Conversion can be done <strong>explicitly</strong> using the ```Boolean()``` function or JavaScript will <strong>silently</strong> perform this conversion when it expects a boolean, such as in an if statement.
 
-* Variables: in modern JavaScript there, variables are declared using one of three keywords: ```let```, ```const```, or ```var```
-* let allows you to declare block-level variables. The declared variable is available from the block it is enclosed in.
-* const allows you to declare variables whose values are never intended to change. The variable is available from the block it is declared in.
-* var is the most common declarative keyword. It does not have the restrictions that the other two keywords have.
-* Before ECMAScript2015, only functions have a scope so if a variable is defined using var in a compound statement (for example inside an if control structure), it will be visible to the entire function. However, starting with ECMAScript 2015, let and const declarations allow you to create block-scoped variables.
+* <strong>Variables</strong>: in modern JavaScript there, variables are declared using one of three keywords: ```let```, ```const```, or ```var```
+  * ```let``` allows you to declare <strong>block-level</strong> variables. The declared variable is available from the block it is enclosed in.
+  * ```const``` allows you to declare variables whose values are <strong>never intended to change</strong>. The variable is available from the block it is declared in.
+  * ```var``` is the most common declarative keyword. It <strong>does not have the restrictions that the other two keywords have</strong>.
+  * Before <strong>ECMAScript2015</strong>, only functions have a scope so if a variable is defined using var in a compound statement (for example inside an if control structure), it will be <strong>visible</strong> to the entire function. However, starting with ECMAScript2015, ```let``` and ```const``` declarations allow you to create block-scoped variables.
 
-Operators: similar to other programming languages
-* If you add a string to a number (or other value) everything is converted into a string first.
-* Adding an empty string to something is a useful way of converting it to a string itself.
-* The double-equals operator performs type coercion if you give it different types, with sometimes interesting results. To avoid type coercion, use the triple-equals operator.
+* <strong>Operators</strong>: similar to other programming languages
+  * If you add a ```string``` to a ```number``` <strong>(or other value)</strong> everything is converted into a <strong>```string```</strong> first.
+  * Adding an empty string to something is a useful way of converting it to a string itself.
+  * The double-equals - ```==``` - operator performs type coercion if you give it different types, with sometimes interesting results. To avoid type coercion, use the triple-equals - ```===``` - operator.
 
-Control structures: similar set of control structures to other languages in the C family
-* ```while``` is good for basic looping. ```do-while``` for loops where you wish to ensure that the body of the loop is executed at least once.
-* ```for...of```: creates a loop iterating over iterable objects. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.
-* ```for...in```: iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties.
-* The && and || operators use short-circuit logic, which means whether they will execute their second operand is dependent on the first. This is useful for checking for null objects before accessing their attributes.
+* <strong>Control structures</strong>: similar set of control structures to other languages in the C family
+  * ```while``` is good for basic looping. ```do-while``` for loops where you wish to ensure that the body of the loop is executed at least once.
+  * ```for...of```: creates a loop iterating over iterable objects. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.
+  * ```for...in```: iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties.
+  * The ```&&``` and ```||``` operators use short-circuit logic, which means whether they will execute their second operand is dependent on the first. This is useful for checking for ```null``` objects before accessing their attributes.
 
-Objects: can be thought of as simple collections of name-value pairs, they are similar to Hash tables in C and C++.
-* Everything in JavaScript is an object which mean that any JavaScript program naturally involves a great deal of hash table lookups.
-* Two basic ways to create an empty object:
-  1- var obj = new Object();
-  2- var obj = {}; : object literal syntax and is more convenient. This syntax is also the core of JSON format and should be preferred at all times.
-* Once created, an object's properties can again be accessed in one of two ways:
- 1- dot notation.
- 2- bracket notation: has the advantage that the name of the property is provided as a string, which means it can be calculated at run-time. However, using this method prevents some JavaScript engine and minifier optimizations being applied. It can also be used to set and get properties with names that are reserved words like ```obje['for']```
-* Notes: 
- 1- Starting in ECMAScript 5, reserved words may be used as object property names "in the buff". This means that they don't need to be "clothed" in quotes when defining object literals.
- 2- Starting in ECMAScript 2015, object keys can be defined by the variable using bracket notation upon being created. {[phoneType]: 12345} is possible instead of just var userPhone = {}; userPhone[phoneType] = 12345.
+* <strong>```Objects```</strong>: can be thought of as simple collections of ```name-value``` pairs, they are similar to Hash tables in C and C++.
+  * <strong>Everything</strong> in JavaScript is an ```object``` which mean that any JavaScript program naturally involves a great deal of hash table lookups.
+  * Two basic ways to create an empty object:
+     1. ```var obj = new Object();```
+     2. ```var obj = {};``` : object literal syntax and is <strong>more convenient</strong>. This syntax is also the core of JSON format and should be preferred at all times.
+  * Once created, an object's properties can again be accessed in one of two ways:
+    1. ```dot``` notation.
+    2. ```bracket``` notation: has the advantage that the name of the property is provided as a string, which means it can be calculated at run-time. However, using this method prevents some JavaScript engine and minifier optimizations being applied. It can also be used to set and get properties with names that are reserved words like ```obje['for']```
+  * Notes: <strong>Starting in ECMAScript2015</strong>
+    1. Reserved words may be used as object property names. This means that they don't need to be "clothed" in quotes when defining object literals.
+    2. Object keys can be defined by the variable using bracket notation upon being created. ```{[phoneType]: 12345}``` is possible instead of just ```var userPhone = {}; userPhone[phoneType] = 12345;```.
 
 Arrays: a special type of object
 * Numerical properties can naturally be accessed only using [] syntax.
