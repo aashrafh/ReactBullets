@@ -256,9 +256,23 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
     * [The Modern JavaScript Tutorial](https://javascript.info/)
     * [JavaScript Path - Frontend Masters](https://frontendmasters.com/learn/javascript/)
     * [Getting Started with JavaScript - Frontend Masters](https://frontendmasters.com/courses/getting-started-javascript-v2/)
+    * [Code documentation for JavaScript with JSDoc](https://www.valentinog.com/blog/jsdoc/)
+    * [JavaScript Documentation Standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/javascript/)
   * <strong>React</strong>:
     * [React Docs](https://reactjs.org/docs/getting-started.html)
     * [React Path - Frontend Masters](https://frontendmasters.com/learn/react/)
-  *<strong>React Router</strong>:
-    *
-  *<strong>Unit Testing</strong>
+    * [React.js cheatsheet](https://devhints.io/react)
+    * [React Cheat Sheet](https://reactcheatsheet.com/)
+    * []()
+    * []()
+  * <strong>React Router</strong>:
+    * [Routing and Navigation in React](https://medium.com/javascript-in-plain-english/routing-and-navigation-in-react-cffc26e8a389)
+    * [Step by step guide of simple routing transition effect for React](https://medium.com/@khwsc1/step-by-step-guide-of-simple-routing-transition-effect-for-react-with-react-router-v4-and-9152db1566a0)
+    * [A Modular Approach To Routing With React Router 4](https://medium.com/iqube-bits/a-modular-approach-to-routing-with-react-router-4-d4a3db9f56ae)
+    * []()
+    * []()
+  * <strong>Unit Testing</strong>:
+    *[React unit testing with Jest & React-testing-library](https://www.youtube.com/watch?v=3e1GHCA3GP0)
+    * [Jest Docs](https://jestjs.io/docs/en/getting-started)
+    * []()
+    * []()
