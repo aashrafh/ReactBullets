@@ -69,38 +69,36 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
     1. Reserved words may be used as object property names. This means that they don't need to be "clothed" in quotes when defining object literals.
     2. Object keys can be defined by the variable using bracket notation upon being created. ```{[phoneType]: 12345}``` is possible instead of just ```var userPhone = {}; userPhone[phoneType] = 12345;```.
 
-Arrays: a special type of object
-* Numerical properties can naturally be accessed only using [] syntax.
-* How to create an Array? 
- 1- 
-    var a = new Array();
-a[0] = 'dog';
-a[1] = 'cat';
-a[2] = 'hen';
+* <strong>```Array```</strong>: a special type of object
+  * Numerical properties can naturally be accessed only using ```[]``` syntax.
+  * How to create an Array?
+    1. ```var a = new Array();```
+       ```a[0] = 'dog';```
+       ```a[1] = 'cat';```
+       ```a[2] = 'hen';```
+    2. More <strong>convenient notation</strong> is to use an array literal: ```var a = ['dog', 'cat', 'hen'];```
 
- 2- more convenient notation is to use an array literal: ```var a = ['dog', 'cat', 'hen'];```
+  * ```array.length``` isn't necessarily the number of items in the array, WHY? the length of the array is one more than the highest index.
+  * If you query a non-existent array index, you'll get a value of ```undefined``` in return
+  * ```for...in``` does not iterate over the array elements, but the array ```indices```. Furthermore, if someone added new properties to ```Array.prototype```, they would also be iterated over by such a loop. Therefore this loop type is <strong>not recommended</strong> for arrays.
+  * Another way of iterating over an array that was added with ECMAScript2015 is ```forEach()```.
 
-* ```array.length``` isn't necessarily the number of items in the array, WHY? the length of the array is one more than the highest index.
-* If you query a non-existent array index, you'll get a value of undefined in return
-* for...in does not iterate over the array elements, but the array indices. Furthermore, if someone added new properties to Array.prototype, they would also be iterated over by such a loop. Therefore this loop type is not recommended for arrays.
-* Another way of iterating over an array that was added with ECMAScript 5 is forEach()
+* <strong>Functions</strong>: Along with objects, functions are the core component in understanding JavaScript
+  * If no return statement is used (or an empty return with no value), JavaScript returns ```undefined```.
+  * You can call a function without passing the parameters it expects, in which case they will be set to ```undefined```. You can also pass in <strong>more arguments</strong> than the function is expecting.
+  * ```arguments```, an array-like object holding all of the values passed to the function.
+  * The ```rest parameter operator``` is used in function parameter lists with the format: ```...variable``` and it will include within that variable the entire list of uncaptured arguments that the function was called with. 
+  * It is important to note that wherever the rest parameter operator is placed in a function declaration it <strong>will store all arguments after its declaration, but not before</strong>.
+  * JavaScript lets you create anonymous functions which stored in variables. This enables all sorts of clever tricks like a way of <strong>hiding</strong> some local variables — like block scope in C.
+  * JavaScript uses <strong>functions</strong> as <strong>classes</strong>.
+  * ```this``` refers to the current object. What that actually means is specified by <strong>the way in which you called that function</strong>. If you called it using dot notation or bracket notation on an object, ```that``` object becomes ```this```. If dot notation wasn't used for the call, this refers to the global object.
+  * ```new``` is strongly related to ```this```. It creates a brand new empty object, and then calls the function specified, with this set to that new object.
+  * JavaScript lets you modify something's prototype at any time in your program, which means you can add extra methods to existing objects at runtime <strong>(prototype chain)</strong>. You can also add things to the prototype of built-in JavaScript objects.
+  * An important detail of nested functions in JavaScript is that they can access variables in their parent function's scope but <strong>not vice versa</strong>.
 
-Functions: Along with objects, functions are the core component in understanding JavaScript
-* If no return statement is used (or an empty return with no value), JavaScript returns undefined.
-* You can call a function without passing the parameters it expects, in which case they will be set to undefined. You can also pass in more arguments than the function is expecting.
-* arguments, an array-like object holding all of the values passed to the function.
-* The rest parameter operator is used in function parameter lists with the format: ...variable and it will include within that variable the entire list of uncaptured arguments that the function was called with. 
-* It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments after its declaration, but not before.
-* JavaScript lets you create anonymous functions which stored in variables. This enables all sorts of clever tricks like a way of "hiding" some local variables — like block scope in C.
-* JavaScript uses functions as classes.
-* this refers to the current object. What that actually means is specified by the way in which you called that function. If you called it using dot notation or bracket notation on an object, that object becomes this. If dot notation wasn't used for the call, this refers to the global object.
-* new is strongly related to this. It creates a brand new empty object, and then calls the function specified, with this set to that new object.
-* JavaScript lets you modify something's prototype at any time in your program, which means you can add extra methods to existing objects at runtime ("prototype chain"). You can also add things to the prototype of built-in JavaScript objects.
-* An important detail of nested functions in JavaScript is that they can access variables in their parent function's scope but not vice versa.
-
-Closures: one of the most powerful abstractions that JavaScript has to offer — but also the most potentially confusing.
-* Whenever JavaScript executes a function, a 'scope' object is created to hold the local variables created within that function. It is initialized with any variables passed in as function parameters.
-* A closure is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects. 
+* <strong>Closures</strong>: one of the most powerful abstractions that JavaScript has to offer — but also the most potentially confusing.
+  * Whenever JavaScript executes a function, a ```scope``` object is created to hold the local variables created within that function. It is initialized with any variables passed in as function parameters.
+  * A closure is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects. 
 
 ## Notes
 * Use ```camelCase``` in JSX attributes as it treateed as JavaScript objects not DOM elements.
