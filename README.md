@@ -174,7 +174,7 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
   * Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime.
   * The best way to introduce code-splitting into your app is through the <strong>dynamic ```import()```</strong>.
 
-* <strong>Hooks</strong>: They let you use ```state``` and other React features without writing a class.
+* Hooks: They let you use ```state``` and other React features without writing a class.
   * What is a Hook? Hooks are functions that let you <strong>hook into</strong> React ```state``` and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes.
   * Hooks let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data). Hooks let you use more of React’s features without classes.
   * Classes <strong>don’t</strong> minify very well, and they make hot reloading <strong>flaky and unreliable</strong>. <strong>There are no plans to remove classes from React</strong>.
@@ -212,33 +212,33 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
     * All we do is to <strong>extract</strong> some common code between functions into a separate function.
     * Without starting the Hook with ```use```, React would not be able to automatically check for violations of rules of Hooks because we could not tell if a certain function contains calls to Hooks inside of it.
     * <strong>Tip</strong>: Pass Information Between Hooks.
-
-Testing: Similar to testing other JavaScript code.
-Two ways of testing React Components:
-* Rendering component trees in a simplified test environment and asserting on their output.
-* Running a complete app in a realistic browser environment (also known as “end-to-end” tests).
-When choosing testing tools, it is worth considering a few tradeoffs:
-* Iteration speed vs Realistic environment.
-* How much to mock.
-Recommended Tools:
-*Jest
-* React Testing Library
-Testing Recipes: Common testing patterns for React components.
-* Setup/Teardown: You may use a different pattern, but keep in mind that we want to execute the cleanup even if a test fails.
-* act(): makes sure all updates related to these “units” have been processed and applied to the DOM before you make any assertions.
-* Rendering
-* Data Fetching: Instead of calling real APIs in all your tests, you can mock requests with dummy data.
-* Mocking Modules: Some modules might not work well inside a testing environment, or may not be as essential to the test itself. Mocking out these modules with dummy replacements can make it easier to write tests for your own code.
-* Events: It is recommended dispatching real DOM events on DOM elements, and then asserting on the result.
-* Timers: Your code might use timer-based functions like setTimeout to schedule more work in the future.
-* Snapshot Testing: Frameworks like Jest also let you save “snapshots” of data with toMatchSnapshot / toMatchInlineSnapshot. With these, we can “save” the rendered component output and ensure that a change to it has to be explicitly committed as a change to the snapshot.These kinds of tests include implementation details so they break easily, and teams can get desensitized to snapshot breakages.
-* Multiple Renderers: In rare cases, you may be running a test on a component that uses multiple renderers. 
-Testing Environments:
-* If you use Create React App, Jest is already included out of the box with useful defaults.
-* It is recommended simulating a browser with jsdom, a lightweight browser implementation that runs inside Node.js.
-* If you’re writing a library that tests mostly browser-specific behavior, and requires native browser behavior like layout or real inputs, you could use a framework like mocha.
-* Frameworks like Cypress, puppeteer and webdriver are useful for running end-to-end tests.
-* When writing tests, we’d like to mock out the parts of our code that don’t have equivalents inside our testing environment. It is then useful to be able to selectively mock these functions with test-friendly versions.
+    
+* Testing: Similar to testing other JavaScript code.
+  * Two ways of testing React Components:
+    * Rendering component trees in a simplified test environment and asserting on their output.
+    * Running a complete app in a realistic browser environment (also known as ```end-to-end``` tests).
+  * When choosing testing tools, it is worth considering a few tradeoffs:
+    * <strong>Iteration speed</strong> VS <strong>Realistic environment</strong>.
+    * <strong>How much to mock</strong>.
+  * Recommended Tools:
+    * ```Jest```
+    * ```React Testing Library```
+  * Testing Recipes: Common testing patterns for React components.
+    * ```Setup/Teardown```: You may use a different pattern, but keep in mind that we want to execute the cleanup even if a test fails.
+    * ```act()```: makes sure all updates related to these <strong>units</strong> have been processed and applied to the DOM before you make any assertions.
+    * ```Rendering```
+    * ```Data Fetching```: Instead of calling real APIs in all your tests, you can mock requests with dummy data.
+    * ```Mocking Modules```: Some modules might not work well inside a testing environment, or may not be as essential to the test itself. Mocking out these modules with dummy replacements can make it easier to write tests for your own code.
+    * ```Events```: It is recommended dispatching real DOM events on DOM elements, and then asserting on the result.
+    * ```Timers```: Your code might use timer-based functions like setTimeout to schedule more work in the future.
+    * ```Snapshot Testing```: Frameworks like ```Jest``` also let you save ```snapshots``` of data with ```toMatchSnapshot``` / ```toMatchInlineSnapshot```. With these, we can <strong>save</strong> the rendered component output and ensure that a change to it has to be explicitly committed as a change to the snapshot.These kinds of tests include implementation details so they break easily, and teams can get desensitized to snapshot breakages.
+    * ```Multiple Renderers```: In rare cases, you may be running a test on a component that uses multiple renderers. 
+  * Testing Environments:
+    * If you use ```Create React App```, ```Jest``` is already included out of the box with useful defaults.
+    * It is <strong>recommended</strong> simulating a browser with <strong>jsdom</strong>, a lightweight browser implementation that runs inside ```Node.js```.
+    * If you’re writing a library that tests mostly browser-specific behavior, and requires native browser behavior like layout or real inputs, you could use a framework like ```mocha```.
+    * Frameworks like ```Cypress```, ```puppeteer``` and ```webdriver``` are useful for running ```end-to-end``` tests.
+    * When writing tests, we’d like to mock out the parts of our code that don’t have equivalents inside our testing environment. It is then useful to be able to selectively mock these functions with test-friendly versions.
 
 ## Learning reasources:
 - [Complete Intro to Web Development](https://frontendmasters.com/courses/web-development-v2/)
