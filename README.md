@@ -174,38 +174,33 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
   * Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime.
   * The best way to introduce code-splitting into your app is through the <strong>dynamic ```import()```</strong>.
 
-Hooks: They let you use state and other React features without writing a class.
-* Hooks let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data). Hooks let you use more of React’s features without classes.
-* Classes don’t minify very well, and they make hot reloading flaky and unreliable. There are no plans to remove classes from React. 
-
-https://www.npmjs.com/package/eslint-plugin-react-hooks
-What is a Hook? Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes.
-* React provides a few built-in Hooks like useState. You can also create your own Hooks to reuse stateful behavior between different components.
-* Hooks are a way to reuse stateful logic, not state itself.
-* Hooks must be called on the top level of our components. If we want to run an effect conditionally, we can put that condition inside our Hook
-
-State Hook:
-* ```useState``` returns a pair: the current state value and a function that lets you update it. 
-* It’s similar to this.setState in a class, except it doesn’t merge the old and new state together.
-* The only argument to useState is the initial state.
-* Unlike this.state, the state here doesn’t have to be an object — although it can be if you want. 
-* You can use the State Hook more than once in a single component.
-* What does calling useState do? It declares a “state variable”, we could call it anything. Normally, variables “disappear” when the function exits but state variables are preserved by React.
-
-
-Effect Hook:
-* ```useEffect``` adds the ability to perform side effects from a function component. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes, but unified into a single API.
-* When you call useEffect, you’re telling React to run your “effect” function after flushing changes to the DOM.
-* Effects are declared inside the component so they have access to its props and state.
-* By default, React runs the effects after every render — including the first render.
-* Effects may also optionally specify how to “clean up” after them by returning a function. 
-*  think that effects happen “after render”. React guarantees the DOM has been updated by the time it runs the effects.
-* Unlike componentDidMount or componentDidUpdate, effects scheduled with useEffect don’t block the browser from updating the screen. 
-* Every effect may return a function that cleans up after it. 
-* React performs the cleanup when the component unmounts. React also cleans up effects from the previous render before running the effects next time. There is no special code for handling updates because useEffect handles them by default.
-* Tips: Use Multiple Effects to Separate Concerns
-* In some cases, cleaning up or applying the effect after every render might create a performance problem.
-* You can tell React to skip applying an effect if certain values haven’t changed between re-renders.
+* <strong>Hooks</strong>: They let you use ```state``` and other React features without writing a class.
+  * What is a Hook? Hooks are functions that let you <strong>hook into</strong> React ```state``` and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes.
+  * Hooks let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data). Hooks let you use more of React’s features without classes.
+  * Classes <strong>don’t</strong> minify very well, and they make hot reloading <strong>flaky and unreliable</strong>. <strong>There are no plans to remove classes from React</strong>.
+  * React provides a few built-in Hooks like useState. You can also create your own Hooks to reuse stateful behavior between different components.
+  * Hooks are a way to reuse <strong>stateful logic, not state itself</strong>.
+  * Hooks <strong>must</strong> be called on the top level of our components. If we want to run an effect conditionally, we can put that condition <strong>inside our Hook</strong>.
+  * <strong>State Hook</strong>:
+    * ```useState``` returns a pair: the current state value and a function that lets you update it. 
+    * It’s similar to ```this.setState``` in a class, except it doesn’t merge the old and new state together.
+    * The only argument to ```useState``` is the initial state.
+    * Unlike ```this.state```, the state here doesn’t have to be an object — although it can be if you want. 
+    * You can use the State Hook more than once in a single component.
+    * What does calling ```useState``` do? It declares a <strong>state variable</strong>, we could call it anything. Normally, variables <strong>disappear</strong> when the function exits but state variables are preserved by React.
+  * <strong>Effect Hook</strong>:
+    * ```useEffect``` adds the ability to perform side effects from a function component. It serves the same purpose as ```componentDidMount```, ```componentDidUpdate```, and ```componentWillUnmount``` in React classes, but unified into a single API.
+    * When you call useEffect, you’re telling React to run your <strong>effect</strong> function after flushing changes to the DOM.
+    * Effects are declared inside the component so they have access to its ```props``` and ```state```.
+    * By default, React runs the effects after every render — including the first render.
+    * Effects may also optionally specify how to <strong>clean up</strong> after them by returning a function. 
+    * Think that effects happen <strong>after render</strong>. React guarantees the DOM has been updated by the time it runs the effects.
+    * Unlike ```componentDidMount``` or ```componentDidUpdate```, effects scheduled with useEffect don’t block the browser from updating the screen. 
+    * Every effect may return a function that cleans up after it. 
+    * React performs the cleanup when the component unmounts. React also cleans up effects from the previous render before running the effects next time. There is no special code for handling updates because ```useEffect``` handles them by default.
+    * <strong>Tip</strong>: Use Multiple Effects to Separate Concerns
+    * In some cases, cleaning up or applying the effect after every render might create a performance problem.
+    * You can tell React to skip applying an effect if certain values have not changed between re-renders.
 
 Rules of Hooks:
 Hooks are JavaScript functions, but they impose two additional rules:
