@@ -1,6 +1,107 @@
 # ReactBullets
 While learning ReactJS, I took notes in the form of bullet points. Here are some points I wrote before start coding [Oud Frontend](https://github.com/AbdallahHemdan/oudFrontend) in addition to some helpfull rsources which was a helping hand.
 
+## JavaScript Overview:
+* JavaScript language has no concept of <strong>input</strong> or <strong>output</strong>. It is up to <strong>the host environment</strong> to provide mechanisms for communicating with the outside world.
+* JavaScript's types are <strong>the building blocks of any language</strong>:
+  * ```Number```
+  * ```String```
+  * ```Boolean```
+  * ```Symbol```
+  * ```Object```:
+    * ```Function```
+    * ```Array```
+    * ```Date```
+    * ```RegExp```
+  * ```null```
+  * ```undefined```
+
+* <strong>```Numbers```</strong>: "double-precision 64-bit format IEEE 754 values"
+  * Be carefull about stuff like: ```0.1 + 0.2 == 0.30000000000000004;```(float problems)
+  * The standard arithmetic operators are supported with some built-in objects like ```Math``` object,  ```parseInt()```, and ```parseFloat()``` functions.
+  * Unlike ```parseFloat()```, ```parseInt()``` can use different bases like decimal, octal, or hexadecimal but be carefull when dealing with old browsers(befor 2013).
+  * the unary ```+``` operator can be used to convert values to numbers like that: ```+ '42'; //42```
+    * So, what is the difference? The parseInt() and parseFloat() functions parse a string until they reach a character that isn't valid for the specified number format, then return the number parsed up to that point. However the "+" operator simply converts the string to NaN if there is an invalid character contained within it.
+  * ```NaN```: a special value returned when the string is non-numeric:
+     * If you provide it as an operand to any mathematical operation, the result will also be NaN
+     * You can test for ```NaN``` using the built-in ```isNaN()``` function.
+  * ``` Infinity``` and ```-Infinity``` are also special types:
+     * You can test for ```Infinity```, ```-Infinity``` and ```NaN``` values using the built-in ```isFinite()``` function.
+
+* <strong>```Strings```</strong>: "sequences of UTF-16 code units; each code unit is represented by a 16-bit number. Each Unicode character is represented by either 1 or 2 code units."
+  * We can use strings as objects too. They have methods as well that allow you to manipulate the string and access information about the string.
+ 
+* <strong>```undefined``` VS ```null```</strong>:
+  * ```undefined``` indicates an uninitialized variable. undefined is actually a constant.
+  * ```null``` is a value that indicates a deliberate non-value (and is only accessible through the null keyword).
+
+* <strong>```Boolean```</strong>: any value can be converted to boolean value according to the following rules:
+  1. ```false```, ```0```, empty strings ```("")```, ```NaN```, ```null```, and ```undefined``` all become false.
+  2. All other values become ```true```.
+  * Conversion can be done <strong>explicitly</strong> using the ```Boolean()``` function or JavaScript will <strong>silently</strong> perform this conversion when it expects a boolean, such as in an if statement.
+
+* Variables: in modern JavaScript there, variables are declared using one of three keywords: ```let```, ```const```, or ```var```
+* let allows you to declare block-level variables. The declared variable is available from the block it is enclosed in.
+* const allows you to declare variables whose values are never intended to change. The variable is available from the block it is declared in.
+* var is the most common declarative keyword. It does not have the restrictions that the other two keywords have.
+* Before ECMAScript2015, only functions have a scope so if a variable is defined using var in a compound statement (for example inside an if control structure), it will be visible to the entire function. However, starting with ECMAScript 2015, let and const declarations allow you to create block-scoped variables.
+
+Operators: similar to other programming languages
+* If you add a string to a number (or other value) everything is converted into a string first.
+* Adding an empty string to something is a useful way of converting it to a string itself.
+* The double-equals operator performs type coercion if you give it different types, with sometimes interesting results. To avoid type coercion, use the triple-equals operator.
+
+Control structures: similar set of control structures to other languages in the C family
+* ```while``` is good for basic looping. ```do-while``` for loops where you wish to ensure that the body of the loop is executed at least once.
+* ```for...of```: creates a loop iterating over iterable objects. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.
+* ```for...in```: iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties.
+* The && and || operators use short-circuit logic, which means whether they will execute their second operand is dependent on the first. This is useful for checking for null objects before accessing their attributes.
+
+Objects: can be thought of as simple collections of name-value pairs, they are similar to Hash tables in C and C++.
+* Everything in JavaScript is an object which mean that any JavaScript program naturally involves a great deal of hash table lookups.
+* Two basic ways to create an empty object:
+  1- var obj = new Object();
+  2- var obj = {}; : object literal syntax and is more convenient. This syntax is also the core of JSON format and should be preferred at all times.
+* Once created, an object's properties can again be accessed in one of two ways:
+ 1- dot notation.
+ 2- bracket notation: has the advantage that the name of the property is provided as a string, which means it can be calculated at run-time. However, using this method prevents some JavaScript engine and minifier optimizations being applied. It can also be used to set and get properties with names that are reserved words like ```obje['for']```
+* Notes: 
+ 1- Starting in ECMAScript 5, reserved words may be used as object property names "in the buff". This means that they don't need to be "clothed" in quotes when defining object literals.
+ 2- Starting in ECMAScript 2015, object keys can be defined by the variable using bracket notation upon being created. {[phoneType]: 12345} is possible instead of just var userPhone = {}; userPhone[phoneType] = 12345.
+
+Arrays: a special type of object
+* Numerical properties can naturally be accessed only using [] syntax.
+* How to create an Array? 
+ 1- 
+    var a = new Array();
+a[0] = 'dog';
+a[1] = 'cat';
+a[2] = 'hen';
+
+ 2- more convenient notation is to use an array literal: ```var a = ['dog', 'cat', 'hen'];```
+
+* ```array.length``` isn't necessarily the number of items in the array, WHY? the length of the array is one more than the highest index.
+* If you query a non-existent array index, you'll get a value of undefined in return
+* for...in does not iterate over the array elements, but the array indices. Furthermore, if someone added new properties to Array.prototype, they would also be iterated over by such a loop. Therefore this loop type is not recommended for arrays.
+* Another way of iterating over an array that was added with ECMAScript 5 is forEach()
+
+Functions: Along with objects, functions are the core component in understanding JavaScript
+* If no return statement is used (or an empty return with no value), JavaScript returns undefined.
+* You can call a function without passing the parameters it expects, in which case they will be set to undefined. You can also pass in more arguments than the function is expecting.
+* arguments, an array-like object holding all of the values passed to the function.
+* The rest parameter operator is used in function parameter lists with the format: ...variable and it will include within that variable the entire list of uncaptured arguments that the function was called with. 
+* It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments after its declaration, but not before.
+* JavaScript lets you create anonymous functions which stored in variables. This enables all sorts of clever tricks like a way of "hiding" some local variables — like block scope in C.
+* JavaScript uses functions as classes.
+* this refers to the current object. What that actually means is specified by the way in which you called that function. If you called it using dot notation or bracket notation on an object, that object becomes this. If dot notation wasn't used for the call, this refers to the global object.
+* new is strongly related to this. It creates a brand new empty object, and then calls the function specified, with this set to that new object.
+* JavaScript lets you modify something's prototype at any time in your program, which means you can add extra methods to existing objects at runtime ("prototype chain"). You can also add things to the prototype of built-in JavaScript objects.
+* An important detail of nested functions in JavaScript is that they can access variables in their parent function's scope but not vice versa.
+
+Closures: one of the most powerful abstractions that JavaScript has to offer — but also the most potentially confusing.
+* Whenever JavaScript executes a function, a 'scope' object is created to hold the local variables created within that function. It is initialized with any variables passed in as function parameters.
+* A closure is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects. 
+
 ## Notes
 * Use ```camelCase``` in JSX attributes as it treateed as JavaScript objects not DOM elements.
 * Always start component names with a capital letter: For example, ```<div />``` represents an HTML div tag, but ```<Welcome />``` represents a component and requires Welcome to be in scope.
@@ -74,105 +175,6 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
   * You need to keep an eye on the code you are <strong>including</strong> in your bundle so that you don’t accidentally make it <strong>so large</strong> that your app takes a <strong>long time</strong> to load.
   * Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime.
   * The best way to introduce code-splitting into your app is through the <strong>dynamic ```import()```</strong>.
-
-JavaScript Overview:
-* JavaScript language has no concept of input or output. It is up to the host environment to provide mechanisms for communicating with the outside world.
-* JavaScript's types are (the building blocks of any language):
-* Number
-* String
-* Boolean
-* Symbol(ES6)
-* Object:
-  * Function(technically, it's a special type of object)
-  * Array
-  * Data
-  * RegExp
-* null
-* undefined
-
-* Numbers: "double-precision 64-bit format IEEE 754 values"
-* Be carefull about stuff like: ```0.1 + 0.2 == 0.30000000000000004;```
-* The standard arithmetic operators are supported with some built-in objects like ```Math``` object,  ```parseInt()```, and ```parseFloat()``` functions.
-* Unlike ```parseFloat()```, ```parseInt()``` can use different bases like decimal, octal, or hexadecimal but be carefull when dealing with old browsers(befor 2013).
-* the unary ```+``` operator can be used to convert values to numbers like that: ```+ '42'; //42```
-  * So, what is the difference? The parseInt() and parseFloat() functions parse a string until they reach a character that isn't valid for the specified number format, then return the number parsed up to that point. However the "+" operator simply converts the string to NaN if there is an invalid character contained within it.
-* ```NaN```: a special value returned when the string is non-numeric:
-   * If you provide it as an operand to any mathematical operation, the result will also be NaN
-   * You can test for NaN using the built-in isNaN() function.
-* ``` Infinity``` and ```-Infinity``` are also special types:
-   * You can test for Infinity, -Infinity and NaN values using the built-in isFinite() function.
-
-Strings: "sequences of UTF-16 code units; each code unit is represented by a 16-bit number. Each Unicode character is represented by either 1 or 2 code units."
-* We can use strings as objects too. They have methods as well that allow you to manipulate the string and access information about the string.
-* undefined VS null:
-* undefined indicates an uninitialized variable. undefined is actually a constant.
-* null is a value that indicates a deliberate non-value (and is only accessible through the null keyword).
-* Boolean: any value can be converted to boolean value according to the following rules:
- 1. false, 0, empty strings (""), NaN, null, and undefined all become false.
- 2. All other values become true.
-* Conversion can be done explicitly using the Boolean() function or JavaScript will silently perform this conversion when it expects a boolean, such as in an if statement.
-
-* Variables: in modern JavaScript there, variables are declared using one of three keywords: ```let```, ```const```, or ```var```
-* let allows you to declare block-level variables. The declared variable is available from the block it is enclosed in.
-* const allows you to declare variables whose values are never intended to change. The variable is available from the block it is declared in.
-* var is the most common declarative keyword. It does not have the restrictions that the other two keywords have.
-* Before ECMAScript2015, only functions have a scope so if a variable is defined using var in a compound statement (for example inside an if control structure), it will be visible to the entire function. However, starting with ECMAScript 2015, let and const declarations allow you to create block-scoped variables.
-
-Operators: similar to other programming languages
-* If you add a string to a number (or other value) everything is converted into a string first.
-* Adding an empty string to something is a useful way of converting it to a string itself.
-* The double-equals operator performs type coercion if you give it different types, with sometimes interesting results. To avoid type coercion, use the triple-equals operator.
-
-Control structures: similar set of control structures to other languages in the C family
-* ```while``` is good for basic looping. ```do-while``` for loops where you wish to ensure that the body of the loop is executed at least once.
-* ```for...of```: creates a loop iterating over iterable objects. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.
-* ```for...in```: iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties.
-* The && and || operators use short-circuit logic, which means whether they will execute their second operand is dependent on the first. This is useful for checking for null objects before accessing their attributes.
-
-Objects: can be thought of as simple collections of name-value pairs, they are similar to Hash tables in C and C++.
-* Everything in JavaScript is an object which mean that any JavaScript program naturally involves a great deal of hash table lookups.
-* Two basic ways to create an empty object:
-  1- var obj = new Object();
-  2- var obj = {}; : object literal syntax and is more convenient. This syntax is also the core of JSON format and should be preferred at all times.
-* Once created, an object's properties can again be accessed in one of two ways:
- 1- dot notation.
- 2- bracket notation: has the advantage that the name of the property is provided as a string, which means it can be calculated at run-time. However, using this method prevents some JavaScript engine and minifier optimizations being applied. It can also be used to set and get properties with names that are reserved words like ```obje['for']```
-* Notes: 
- 1- Starting in ECMAScript 5, reserved words may be used as object property names "in the buff". This means that they don't need to be "clothed" in quotes when defining object literals.
- 2- Starting in ECMAScript 2015, object keys can be defined by the variable using bracket notation upon being created. {[phoneType]: 12345} is possible instead of just var userPhone = {}; userPhone[phoneType] = 12345.
-
-Arrays: a special type of object
-* Numerical properties can naturally be accessed only using [] syntax.
-* How to create an Array? 
- 1- 
-    var a = new Array();
-a[0] = 'dog';
-a[1] = 'cat';
-a[2] = 'hen';
-
- 2- more convenient notation is to use an array literal: ```var a = ['dog', 'cat', 'hen'];```
-
-* ```array.length``` isn't necessarily the number of items in the array, WHY? the length of the array is one more than the highest index.
-* If you query a non-existent array index, you'll get a value of undefined in return
-* for...in does not iterate over the array elements, but the array indices. Furthermore, if someone added new properties to Array.prototype, they would also be iterated over by such a loop. Therefore this loop type is not recommended for arrays.
-* Another way of iterating over an array that was added with ECMAScript 5 is forEach()
-
-Functions: Along with objects, functions are the core component in understanding JavaScript
-* If no return statement is used (or an empty return with no value), JavaScript returns undefined.
-* You can call a function without passing the parameters it expects, in which case they will be set to undefined. You can also pass in more arguments than the function is expecting.
-* arguments, an array-like object holding all of the values passed to the function.
-* The rest parameter operator is used in function parameter lists with the format: ...variable and it will include within that variable the entire list of uncaptured arguments that the function was called with. 
-* It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments after its declaration, but not before.
-* JavaScript lets you create anonymous functions which stored in variables. This enables all sorts of clever tricks like a way of "hiding" some local variables — like block scope in C.
-* JavaScript uses functions as classes.
-* this refers to the current object. What that actually means is specified by the way in which you called that function. If you called it using dot notation or bracket notation on an object, that object becomes this. If dot notation wasn't used for the call, this refers to the global object.
-* new is strongly related to this. It creates a brand new empty object, and then calls the function specified, with this set to that new object.
-* JavaScript lets you modify something's prototype at any time in your program, which means you can add extra methods to existing objects at runtime ("prototype chain"). You can also add things to the prototype of built-in JavaScript objects.
-* An important detail of nested functions in JavaScript is that they can access variables in their parent function's scope but not vice versa.
-
-Closures: one of the most powerful abstractions that JavaScript has to offer — but also the most potentially confusing.
-* Whenever JavaScript executes a function, a 'scope' object is created to hold the local variables created within that function. It is initialized with any variables passed in as function parameters.
-* A closure is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects. 
 
 Hooks: They let you use state and other React features without writing a class.
 * Hooks let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data). Hooks let you use more of React’s features without classes.
