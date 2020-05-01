@@ -242,7 +242,6 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
 
 ## Learning Resources:
   * <strong>General</strong>:
-    * [Clean Code JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
     * [Complete Intro to Web Development - Frontend Masters](https://frontendmasters.com/courses/web-development-v2/)
     * [Front-End Checklist](https://github.com/thedaviddias/Front-End-Checklist)
     * [Front-End Performance Checklist](https://github.com/thedaviddias/Front-End-Performance-Checklist)
@@ -251,6 +250,7 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
     * [Illustrated](https://illustrated.dev/)
     * [Code Guide](https://codeguide.co/)
   * <strong>JavaScript</strong>:
+    * [Clean Code JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
     * [JS Tutorial](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
     * [33 JS concepts](https://github.com/leonardomso/33-js-concepts)
     * [The Modern JavaScript Tutorial](https://javascript.info/)
