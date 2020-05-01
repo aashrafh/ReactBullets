@@ -54,26 +54,26 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
     * <strong>Find</strong> a common owner component (a single component above all the components that need the state in the hierarchy).
     * Either the common owner or another component higher up in the hierarchy should <strong>own</strong> the state.
     * If you can’t find a component where it makes sense to own the state, <strong>create</strong> a new component solely for holding the state and add it somewhere in the hierarchy above the common owner component.
- * <strong>Step 5</strong>: Add Inverse Data Flow
+  * <strong>Step 5</strong>: Add Inverse Data Flow
  
- * aria-* attributes should be hyphen-cased.
+ * ```aria-*``` attributes should be ```hyphen-cased```.
 * Accessibility Points for Consideration:
- * Semantic HTML: foundation of accessibility in a web application.
- * Accessible Forms: Labeling + Notifying the user of errors.
- * Ensure that your web application can be fully operated with the keyboard only.
- * Mechanisms to skip to desired content
- * Be carefull about focus as React modify HTML DOM during runtime which may cause to keyboard focus being lost or set to an unexpected element.
- * Ensure that all functionality exposed through a mouse or pointer event can also be accessed using the keyboard alone.
- * Indicate the human language of page texts as screen reader software uses this to select the correct voice settings.
- * Set the document <title> to correctly describe the current page content as this ensures that the user remains aware of the current page context.
- * Ensure that all readable text on your website has sufficient color contrast to remain maximally readable by users with low vision.
+  * <strong>Semantic HTML</strong>: foundation of accessibility in a web application.
+  * <strong>Accessible Forms</strong>: Labeling + Notifying the user of errors.
+  * Ensure that your web application can be <strong>fully operated</strong> with the <strong>keyboard only</strong>.
+  * Mechanisms to skip to <strong>desired content</strong>.
+  * Be carefull about <strong>focus</strong> as React modify HTML DOM during runtime which may cause to keyboard focus being <strong>lost</strong> or set to an <strong>unexpected element</strong>.
+  * Ensure that <strong>all functionality</strong> exposed through a <strong>mouse or pointer</strong> event can also be accessed using the keyboard alone.
+  * Indicate <strong>the human language of page</strong> texts as screen reader software uses this to select the correct voice settings.
+  * Set the document ```<title>``` to correctly <strong>describe</strong> the current page content as this ensures that the user remains aware of the current page context.
+  * Ensure that all readable text on your website has <strong>sufficient color contrast</strong> to remain maximally readable by users with low vision.
 
- * Code Splitting:
-* A bundle: the process of following imported files and merging them into a single file.
-* Create React App, Next.js, Gatsby, or a similar tool, has a Webpack setup out of the box to bundle your app.
-* You need to keep an eye on the code you are including in your bundle so that you don’t accidentally make it so large that your app takes a long time to load.
-* Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime.
-* The best way to introduce code-splitting into your app is through the dynamic import().
+* Code Splitting:
+  * <strong>A bundle</strong>: the process of following imported files and merging them into a single file.
+  * Create React App, Next.js, Gatsby, or a similar tool, has a <strong>Webpack</strong> setup out of the box to bundle your app.
+  * You need to keep an eye on the code you are <strong>including</strong> in your bundle so that you don’t accidentally make it <strong>so large</strong> that your app takes a <strong>long time</strong> to load.
+  * Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime.
+  * The best way to introduce code-splitting into your app is through the <strong>dynamic ```import()```</strong>.
 
 JavaScript Overview:
 * JavaScript language has no concept of input or output. It is up to the host environment to provide mechanisms for communicating with the outside world.
