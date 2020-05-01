@@ -269,7 +269,7 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
     * [Step by step guide of simple routing transition effect for React](https://medium.com/@khwsc1/step-by-step-guide-of-simple-routing-transition-effect-for-react-with-react-router-v4-and-9152db1566a0)
     * [A Modular Approach To Routing With React Router 4](https://medium.com/iqube-bits/a-modular-approach-to-routing-with-react-router-4-d4a3db9f56ae)
   * <strong>Unit Testing</strong>:
-    *[React unit testing with Jest & React-testing-library](https://www.youtube.com/watch?v=3e1GHCA3GP0)
+    * [React unit testing with Jest & React-testing-library](https://www.youtube.com/watch?v=3e1GHCA3GP0)
     * [Jest Docs](https://jestjs.io/docs/en/getting-started)
     * [How to Test React Components using Jest and Enzyme](https://blog.bitsrc.io/how-to-test-react-components-using-jest-and-enzyme-fab851a43875)
     * [Testing React Components with Jest and Enzyme- In Depth](https://blog.bitsrc.io/how-to-test-react-components-with-jest-and-enzyme-in-depth-145fcd06b90)
