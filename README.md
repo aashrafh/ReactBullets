@@ -39,22 +39,22 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
 * ```Controlled Component```: combining elements state and update it based on user input. An input form element whose value is controlled by React. This makes it straightforward to modify or validate user input.
 * Files from user device are ```read-only``` so they are ```uncontrolled components```.
 * ```Formik``` is a good complete solution for handling forms. It is built on controlled component princeples so it is important to learn them.
-* If you want to reflect the same data in several components, it is recommended to lift the shared state up to their closest ancestor.
-* There should be a single “source of truth” for any data that changes in a React application.
-* It is recommended to use composition instead of inheritance to reuse code between components.
-* State is reserved only for interactivity, that is, data that changes over time. Don’t use state at all to build a static version.
-* In simpler examples, it’s usually easier to go top-down, and on larger projects, it’s easier to go bottom-up and write tests as you build.
+* If you want to reflect the same data in several components, it is recommended to <strong>lift the shared state up</strong> to their closest ancestor.
+* There should be a <strong>single source of truth</strong> for any data that changes in a React application.
+* It is recommended to use <strong>composition</strong> instead of <strong>inheritance</strong> to reuse code between components.
+* ```State``` is reserved only for <strong>interactivity</strong>, that is, <strong>data that changes over time</strong>. Don’t use ```state``` at all to build a static version.
+* In <strong>simpler</strong> examples, it’s usually easier to go <strong>top-down</strong>, and on <strong>larger</strong> projects, it’s easier to go <strong>bottom-up</strong> and write <strong>tests</strong> as you build.
 * Steps to build the UI in React:
- * Step 1: Break The UI Into A Component Hierarchy
- * Step 2: Build A Static Version in React
- * Identify The Minimal (but complete) Representation Of UI State
- * Step 4: Identify Where Your State Should Live:
-   For each piece of state in your application:
-    * Identify every component that renders something based on that state.
-    * Find a common owner component (a single component above all the components that need the state in the hierarchy).
-    * Either the common owner or another component higher up in the hierarchy should own the state.
-    * If you can’t find a component where it makes sense to own the state, create a new component solely for holding the state and add it somewhere in the hierarchy above the common owner component.
- * Step 5: Add Inverse Data Flow
+  * <strong>Step 1</strong>: Break The UI Into A Component Hierarchy
+  * <strong>Step 2</strong>: Build A Static Version in React
+  * <strong>Step 3</strong>: Identify The Minimal (but complete) Representation Of UI State
+  * <strong>Step 4</strong>: Identify Where Your State Should Live:
+    #### For each piece of state in your application:
+    * <strong>Identify</strong> every component that renders something based on that state.
+    * <strong>Find</strong> a common owner component (a single component above all the components that need the state in the hierarchy).
+    * Either the common owner or another component higher up in the hierarchy should <strong>own</strong> the state.
+    * If you can’t find a component where it makes sense to own the state, <strong>create</strong> a new component solely for holding the state and add it somewhere in the hierarchy above the common owner component.
+ * <strong>Step 5</strong>: Add Inverse Data Flow
  
  * aria-* attributes should be hyphen-cased.
 * Accessibility Points for Consideration:
