@@ -201,20 +201,17 @@ While learning ReactJS, I took notes in the form of bullet points. Here are some
     * <strong>Tip</strong>: Use Multiple Effects to Separate Concerns
     * In some cases, cleaning up or applying the effect after every render might create a performance problem.
     * You can tell React to skip applying an effect if certain values have not changed between re-renders.
-
-Rules of Hooks:
-Hooks are JavaScript functions, but they impose two additional rules:
-* Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions.
-* Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks — your own custom Hooks.)
-* React provide a linter plugin to enforce these rules automatically.
-
-Building Your Own Hooks:
-* Custom Hooks let you reuse some stateful logic between components but without adding more components to your tree.
-* Custom Hooks are more of a convention than a feature. If a function’s name starts with ”use” and it calls other Hooks, we say it is a custom Hook.
-* It’s just like a normal function.
-* All we do isto extract some common code between functions into a separate function.
-* Without starting the Hook with ```use``, React wouldn’t be able to automatically check for violations of rules of Hooks because we couldn’t tell if a certain function contains calls to Hooks inside of it.
-* Tip: Pass Information Between Hooks
+  * <strong>Rules of Hooks</strong>: Hooks are JavaScript functions, but they impose two additional rules:
+    * <strong>Only call Hooks at the top level</strong>. Don’t call Hooks inside loops, conditions, or nested functions.
+    * <strong>Only call Hooks from React function components</strong>. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks — your own custom Hooks.)
+    * React provide a <a href="https://www.npmjs.com/package/eslint-plugin-react-hooks">linter plugin</a> to enforce these rules automatically.
+  * <strong>Building Your Own Hooks</strong>:
+    * Custom Hooks let you reuse some stateful logic between components but without adding more components to your tree.
+    * Custom Hooks are more of a <strong>convention</strong> than a feature. If a function’s name starts with ```use``` and it calls other Hooks, we say it is a <strong>custom Hook</strong>.
+    * It’s just like a normal function.
+    * All we do is to <strong>extract</strong> some common code between functions into a separate function.
+    * Without starting the Hook with ```use```, React would not be able to automatically check for violations of rules of Hooks because we could not tell if a certain function contains calls to Hooks inside of it.
+    * <strong>Tip</strong>: Pass Information Between Hooks.
 
 Testing: Similar to testing other JavaScript code.
 Two ways of testing React Components:
