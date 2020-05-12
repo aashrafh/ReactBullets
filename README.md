@@ -100,6 +100,11 @@
   * Whenever JavaScript executes a function, a ```scope``` object is created to hold the local variables created within that function. It is initialized with any variables passed in as function parameters.
   * A closure is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects. 
 
+## What does react.js try to solve?
+* DOM operations are quite expensive in terms of performance.
+* Doing optimizing DOM manipulation by hand will result in a lot of <strong>boilerplate</strong> code, which is error-prone, boring and repetitive.
+* If the page has data that changes over time at high rates (for example, lots of people commenting on a post, likes being generated etc), then there is a requirement for DOM updates to be very fast and also reflect in other parts of the UI if they use the same data.
+* React solves this by giving the developer a virtual DOM to render to instead of the actual DOM, which it then diffs with the real DOM, and does the minimum number of DOM operations needed to achieve the new state.
 ## React Notes
 * Use ```camelCase``` in JSX attributes as it treateed as JavaScript objects not DOM elements.
 * Always start component names with a capital letter: For example, ```<div />``` represents an HTML div tag, but ```<Welcome />``` represents a component and requires Welcome to be in scope.
@@ -259,6 +264,7 @@
     * [Code documentation for JavaScript with JSDoc](https://www.valentinog.com/blog/jsdoc/)
     * [JavaScript Documentation Standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/javascript/)
   * <strong>React</strong>:
+    * [What does react.js try to solve?](https://www.quora.com/What-does-react-js-try-to-solve-Can-you-provide-a-practical-example)
     * [React Docs](https://reactjs.org/docs/getting-started.html)
     * [React Path - Frontend Masters](https://frontendmasters.com/learn/react/)
     * [React.js cheatsheet](https://devhints.io/react)
