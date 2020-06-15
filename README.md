@@ -1,7 +1,19 @@
-# ReactBullets
+## 📝 Table of Contents
+- [About](#bullets)
+- [JavaScript Overview](#js)
+- [What does react.js try to solve?](#virtualDom)
+- [General Notes](#general)
+- [React Rendering Behavior](#rendering)
+- [Accessibility](#accessibility)
+- [Code Splitting](#codeSplitting)
+- [Hooks](#hooks)
+- [Testing](#testing)
+- [Learning Resources](#learningResources)
+
+# ReactBullets <a name = "bullets"></a>
  While learning ReactJS, I took notes in the form of bullet points for fast revision. Here are some points I wrote before start coding [Oud](https://github.com/aashrafh/Oud) Frontend in addition to some helpful resources which was a helping hand that may help you if you are learning React.js. I also will keep updating the repo with any usefull notes, or resources.
 
-## JavaScript Overview:
+## JavaScript Overview<a name = "js"></a>: 
 * JavaScript language has no concept of <strong>input</strong> or <strong>output</strong>. It is up to <strong>the host environment</strong> to provide mechanisms for communicating with the outside world.
 * JavaScript's types are <strong>the building blocks of any language</strong>:
   * ```Number```
@@ -100,12 +112,12 @@
   * Whenever JavaScript executes a function, a ```scope``` object is created to hold the local variables created within that function. It is initialized with any variables passed in as function parameters.
   * A closure is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects. 
 
-## What does react.js try to solve?
+## What does react.js try to solve?<a name="virtualDom"></a>
 * DOM operations are quite expensive in terms of performance.
 * Doing optimizing DOM manipulation by hand will result in a lot of <strong>boilerplate</strong> code, which is error-prone, boring and repetitive.
 * If the page has data that changes over time at high rates (for example, lots of people commenting on a post, likes being generated etc), then there is a requirement for DOM updates to be very fast and also reflect in other parts of the UI if they use the same data.
 * React solves this by giving the developer a virtual DOM to render to instead of the actual DOM, which it then diffs with the real DOM, and does the minimum number of DOM operations needed to achieve the new state.
-## React Notes
+## React Notes<a name="general"></a>
 * Use ```camelCase``` in JSX attributes as it treateed as JavaScript objects not DOM elements.
 * Always start component names with a capital letter: For example, ```<div />``` represents an HTML div tag, but ```<Welcome />``` represents a component and requires Welcome to be in scope.
 * If a part of your UI is used several times (Button, Panel, Avatar), or is complex enough on its own (App, FeedStory, Comment), it is a good candidate to be a reusable component.
@@ -161,7 +173,7 @@
   * <strong>Step 5</strong>: Add Inverse Data Flow
  
  * ```aria-*``` attributes should be ```hyphen-cased```.
-* React Rendering Behavior:
+* React Rendering Behavior:<a name = "rendering"></a>
   * React's default behavior is that when a <strong>parent component renders</strong>, React will recursively render <strong>all child components</strong> inside of it!
   * In normal rendering, React does not care whether "props changed" - it will render child components unconditionally just because the parent rendered!
   * Rendering is not a bad thing - it's how React knows whether it needs to actually make any changes to the DOM!
@@ -176,7 +188,7 @@
   * Passing a new object to a context provider will cause it to update.
   * Currently, there is no way for a component that consumes a context to skip updates caused by new context values, even if it only cares about part of a new value.
 
-* Accessibility Points for Consideration:
+* Accessibility Points for Consideration:<a name = "accessibility"></a>
   * <strong>Semantic HTML</strong>: foundation of accessibility in a web application.
   * <strong>Accessible Forms</strong>: Labeling + Notifying the user of errors.
   * Ensure that your web application can be <strong>fully operated</strong> with the <strong>keyboard only</strong>.
@@ -187,14 +199,14 @@
   * Set the document ```<title>``` to correctly <strong>describe</strong> the current page content as this ensures that the user remains aware of the current page context.
   * Ensure that all readable text on your website has <strong>sufficient color contrast</strong> to remain maximally readable by users with low vision.
 
-* Code Splitting:
+* Code Splitting:<a name = "codeSplitting"></a>
   * <strong>A bundle</strong>: the process of following imported files and merging them into a single file.
   * Create React App, Next.js, Gatsby, or a similar tool, has a <strong>Webpack</strong> setup out of the box to bundle your app.
   * You need to keep an eye on the code you are <strong>including</strong> in your bundle so that you don’t accidentally make it <strong>so large</strong> that your app takes a <strong>long time</strong> to load.
   * Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime.
   * The best way to introduce code-splitting into your app is through the <strong>dynamic ```import()```</strong>.
 
-* Hooks: They let you use ```state``` and other React features without writing a class.
+* Hooks: They let you use ```state``` and other React features without writing a class.<a name = "hooks"></a>
   * What is a Hook? Hooks are functions that let you <strong>hook into</strong> React ```state``` and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes.
   * Hooks let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data). Hooks let you use more of React’s features without classes.
   * Classes <strong>don’t</strong> minify very well, and they make hot reloading <strong>flaky and unreliable</strong>. <strong>There are no plans to remove classes from React</strong>.
@@ -233,7 +245,7 @@
     * Without starting the Hook with ```use```, React would not be able to automatically check for violations of rules of Hooks because we could not tell if a certain function contains calls to Hooks inside of it.
     * <strong>Tip</strong>: Pass Information Between Hooks.
     
-* Testing: Similar to testing other JavaScript code.
+* Testing: Similar to testing other JavaScript code.<a name = "testing"></a>
   * Two ways of testing React Components:
     * Rendering component trees in a simplified test environment and asserting on their output.
     * Running a complete app in a realistic browser environment (also known as ```end-to-end``` tests).
@@ -260,7 +272,7 @@
     * Frameworks like ```Cypress```, ```puppeteer``` and ```webdriver``` are useful for running ```end-to-end``` tests.
     * When writing tests, we’d like to mock out the parts of our code that don’t have equivalents inside our testing environment. It is then useful to be able to selectively mock these functions with test-friendly versions.
 
-## Learning Resources:
+## Learning Resources:<a name = "learningResources"></a>
   * <strong>General</strong>:
     * [Complete Intro to Web Development - Frontend Masters](https://frontendmasters.com/courses/web-development-v2/)
     * [Front-End Checklist](https://github.com/thedaviddias/Front-End-Checklist)
