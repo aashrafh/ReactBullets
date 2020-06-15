@@ -171,6 +171,10 @@
     * [```React.PureComponent```](https://reactjs.org/docs/react-api.html#reactpurecomponent)
     * [```React.memo()```](https://reactjs.org/docs/react-api.html#reactmemo)
   * Skipping rendering a component means React will also skip rendering that entire subtree, because it's effectively putting a stop sign up to halt the default "render children recursively" behavior.
+  * If the child component is trying to optimize renders by checking to see whether props have changed, then passing new references as props will cause the child to render.
+  * When a context provider has a new value, every nested component that consumes that context will be forced to re-render..
+  * Passing a new object to a context provider will cause it to update.
+  * Currently, there is no way for a component that consumes a context to skip updates caused by new context values, even if it only cares about part of a new value.
 
 * Accessibility Points for Consideration:
   * <strong>Semantic HTML</strong>: foundation of accessibility in a web application.
