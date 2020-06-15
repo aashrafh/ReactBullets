@@ -1,5 +1,5 @@
 # ReactBullets
- While learning ReactJS, I took notes in the form of bullet points for fast revision. Here are some points I wrote before start coding [Oud](https://github.com/aashrafh/Oud) Frontend in addition to some helpful resources which was a helping hand that may help you if you are learning ReactJS.
+ While learning ReactJS, I took notes in the form of bullet points for fast revision. Here are some points I wrote before start coding [Oud](https://github.com/aashrafh/Oud) Frontend in addition to some helpful resources which was a helping hand that may help you if you are learning React.js. I also will keep updating the repo with any usefull notes, or resources.
 
 ## JavaScript Overview:
 * JavaScript language has no concept of <strong>input</strong> or <strong>output</strong>. It is up to <strong>the host environment</strong> to provide mechanisms for communicating with the outside world.
@@ -161,6 +161,17 @@
   * <strong>Step 5</strong>: Add Inverse Data Flow
  
  * ```aria-*``` attributes should be ```hyphen-cased```.
+* React Rendering Behavior:
+  * React's default behavior is that when a <strong>parent component renders</strong>, React will recursively render <strong>all child components</strong> inside of it!
+  * In normal rendering, React does not care whether "props changed" - it will render child components unconditionally just because the parent rendered!
+  * Rendering is not a bad thing - it's how React knows whether it needs to actually make any changes to the DOM!
+  * Optimizing React rendering is primarily about doing less work by skipping rendering components when appropriate.
+  * How to skip rendering a component?
+    * [```React.Component.shouldComponentUpdate```](https://reactjs.org/docs/react-component.html#shouldcomponentupdate)
+    * [```React.PureComponent```](https://reactjs.org/docs/react-api.html#reactpurecomponent)
+    * [```React.memo()```](https://reactjs.org/docs/react-api.html#reactmemo)
+  * Skipping rendering a component means React will also skip rendering that entire subtree, because it's effectively putting a stop sign up to halt the default "render children recursively" behavior.
+
 * Accessibility Points for Consideration:
   * <strong>Semantic HTML</strong>: foundation of accessibility in a web application.
   * <strong>Accessible Forms</strong>: Labeling + Notifying the user of errors.
@@ -270,6 +281,7 @@
     * [React.js cheatsheet](https://devhints.io/react)
     * [React Cheat Sheet](https://reactcheatsheet.com/)
     * [A Guide to using JSDoc for React.js](https://www.inkoop.io/blog/a-guide-to-js-docs-for-react-js/)
+    * [A (Mostly) Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/)
   * <strong>React Router</strong>:
     * [Routing and Navigation in React](https://medium.com/javascript-in-plain-english/routing-and-navigation-in-react-cffc26e8a389)
     * [Step by step guide of simple routing transition effect for React](https://medium.com/@khwsc1/step-by-step-guide-of-simple-routing-transition-effect-for-react-with-react-router-v4-and-9152db1566a0)
