@@ -283,7 +283,23 @@
   * The type property drives how the state should change and it's always required by Redux.
   * The payload property instead describes what should change, and might be omitted.
   * A best practice in Redux we wrap every action within a function. Such function takes the name of action creator.
-
+  * The most important Redux methods are:
+    * ```getState``` for reading the current state of the application.
+    * ```dispatch``` for dispatching an action.
+    * ```subscribe``` for listening to state changes.
+  * The key for connecting a React component with Redux is connect.
+  * <strong>mapStateToProps</strong> connects a part of the Redux state to the props of a React component.
+  * <strong>mapDispatchToProps</strong> connects Redux actions to React props.
+  * <strong>mapStateToProps</strong>, and <strong>mapDispatchToProps</strong> are just conventions.
+  * A Redux middleware is a function that is able to intercept, and act accordingly, our actions, before they reach the reducer. 
+  * Benefits from using a Redux middleware:
+    * Most of the logic can live outside the UI library.
+    * Middleware become reusable pieces of logic, easy to reason about.
+    * Middleware can be tested in isolation.
+  * redux-thunk is a middleware for Redux. With redux-thunk you can return functions from action creators, not only objects. You can do asynchronous work inside your actions and dispatch other actions in response to AJAX calls.
+  * redux-saga is a Redux middleware for managing side effects.
+  * redux-saga you can have clear separation between synchronous and asynchronous logic.
+ 
 
 ## Learning Resources:<a name = "learningResources"></a>
   * <strong>General</strong>:
