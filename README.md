@@ -8,6 +8,7 @@
 - [Code Splitting](#codeSplitting)
 - [Hooks](#hooks)
 - [Testing](#testing)
+- [Redux](#redux)
 - [Learning Resources](#learningResources)
 
 # ReactBullets <a name = "bullets"></a>
@@ -271,6 +272,18 @@
     * If you’re writing a library that tests mostly browser-specific behavior, and requires native browser behavior like layout or real inputs, you could use a framework like ```mocha```.
     * Frameworks like ```Cypress```, ```puppeteer``` and ```webdriver``` are useful for running ```end-to-end``` tests.
     * When writing tests, we’d like to mock out the parts of our code that don’t have equivalents inside our testing environment. It is then useful to be able to selectively mock these functions with test-friendly versions.
+
+## Redux<a name = "redux"></a>
+  * The store holds all of the application's state.
+  * Reducers produce the state of your application.
+  * The state is immutable and cannot change in place.
+  * The only way to change the state is by sending a signal to the store. This signal is an action.
+  * <strong>Dispatching an action</strong> means sending out a signal to the store.
+  * Redux actions are nothing more than JavaScript objects.
+  * The type property drives how the state should change and it's always required by Redux.
+  * The payload property instead describes what should change, and might be omitted.
+  * A best practice in Redux we wrap every action within a function. Such function takes the name of action creator.
+
 
 ## Learning Resources:<a name = "learningResources"></a>
   * <strong>General</strong>:
